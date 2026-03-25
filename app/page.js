@@ -142,9 +142,13 @@ export default function Home() {
             <h2 className="font-extrabold text-2xl text-slate-800 mt-2 tracking-tight">Tu boleto NO incluye</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {[{icon:"🏨",t:"Hospedaje",d:"El hotel se paga aparte. Ve más abajo las opciones con convenio y Airbnb."},{icon:"🚌",t:"Transporte",d:"León → Guadalajara (~3 hrs). Estamos gestionando transporte grupal UPIIG."},{icon:"🍽️",t:"Comidas",d:"Solo incluye coffee break. El hotel con convenio SÍ incluye desayuno."}].map((x, i) => (
+            {[
+              { icon: BedDouble, color: "#f43f5e", t: "Hospedaje",  d: "El hotel se paga aparte. Ve más abajo las opciones con convenio y Airbnb." },
+              { icon: Bus,       color: "#f43f5e", t: "Transporte", d: "León → Guadalajara (~3 hrs). Estamos gestionando transporte grupal UPIIG." },
+              { icon: Utensils,  color: "#f43f5e", t: "Comidas",    d: "Solo incluye coffee break. El hotel con convenio SÍ incluye desayuno." },
+            ].map((x, i) => (
               <div key={i} className="bg-white rounded-3xl p-6 border border-rose-100">
-                <div className="text-3xl mb-3">{x.icon}</div>
+                <div className="mb-3"><IconBox icon={x.icon} color={x.color} /></div>
                 <div className="font-extrabold text-sm text-slate-800 mb-1">{x.t}</div>
                 <div className="text-xs text-slate-500 leading-relaxed">{x.d}</div>
               </div>
