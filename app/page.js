@@ -251,7 +251,7 @@ export default function Home() {
           <h3 className="font-extrabold text-lg text-slate-700 mb-4">🏠 Opción B: Airbnb grupal (más barato)</h3>
           <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-6 border-2 border-emerald-200 mb-8">
             <div className="flex flex-col sm:flex-row items-start gap-4">
-              <div className="w-16 h-16 rounded-2xl bg-emerald-100 border border-emerald-200 flex items-center justify-center text-3xl flex-shrink-0">🏡</div>
+              <div className="flex-shrink-0"><IconBox icon={House} color="#10b981" /></div>
               <div className="flex-1">
                 <div className="font-extrabold text-slate-800 mb-1">Casa completa cerca del metro</div>
                 <div className="text-sm text-slate-600 mb-3 leading-relaxed">Rentar un Airbnb para 16 personas puede salir mucho más barato. Ejemplo: ~$8,000 MXN/noche entre todos = <strong className="text-emerald-700">~$500 por persona por noche</strong>.</div>
@@ -268,7 +268,7 @@ export default function Home() {
                       ))}
                     </div>
                     <div className="bg-amber-50 rounded-2xl p-4 border border-amber-200">
-                      <div className="font-bold text-sm text-amber-800 mb-2">⚠️ Consideraciones</div>
+                      <div className="font-bold text-sm text-amber-800 mb-2 flex items-center gap-1"><AlertTriangle size={14} color="#f59e0b" /> Consideraciones</div>
                       <div className="text-xs text-amber-700 space-y-1 leading-relaxed">
                         <div>• No incluye desayuno (tendrás que comprar comida)</div>
                         <div>• Coordinarse bien para limpieza</div>
@@ -286,7 +286,7 @@ export default function Home() {
           {/* TRANSPORTE */}
           <div className="bg-slate-50 rounded-3xl overflow-hidden border border-slate-100 mb-8">
             <button onClick={() => setST(!sT)} className="w-full flex items-center justify-between p-5">
-              <div className="flex items-center gap-3"><span className="text-xl">🚌</span><span className="font-extrabold text-slate-800 text-sm">¿Y el transporte León → Guadalajara?</span></div>
+              <div className="flex items-center gap-3"><Bus size={20} color="#64748b" /><span className="font-extrabold text-slate-800 text-sm">¿Y el transporte León → Guadalajara?</span></div>
               <Chev open={sT} />
             </button>
             {sT && (
@@ -301,7 +301,7 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <div className="bg-amber-50 rounded-2xl p-4 border border-amber-200 text-xs text-amber-700 font-medium">💡 Estamos gestionando transporte grupal UPIIG. Regístrate y te avisamos.</div>
+                <div className="bg-amber-50 rounded-2xl p-4 border border-amber-200 flex items-center gap-2 text-xs text-amber-700 font-medium"><Lightbulb size={14} color="#f59e0b" className="flex-shrink-0" /> Estamos gestionando transporte grupal UPIIG. Regístrate y te avisamos.</div>
               </div>
             )}
           </div>
