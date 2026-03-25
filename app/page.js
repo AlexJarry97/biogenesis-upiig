@@ -1,5 +1,6 @@
 'use client';
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
+import { Mic, Coffee, FileText, Rocket, Image, Users, BedDouble, Bus, Utensils, House, Lightbulb, AlertTriangle, ArrowRight, PartyPopper } from 'lucide-react';
 
 const GOOGLE_FORM_URL = "https://forms.gle/YRHR914L2pVnuNyq9";
 const WHATSAPP_CONTACT = "https://wa.me/5214772688815";
@@ -35,6 +36,27 @@ const Chev = ({ open }) => (
     <polyline points="6 9 12 15 18 9" />
   </svg>
 );
+
+const TAG_COLORS = {
+  "Investigación": "#8b5cf6",
+  "Inversión":     "#f59e0b",
+  "Industria":     "#10b981",
+  "Gobernanza":    "#0ea5e9",
+  "Bioplásticos":  "#14b8a6",
+  "DeepTech":      "#6366f1",
+  "Innovación":    "#f97316"
+}
+
+const IconBox = ({ icon: Icon, color }) => (
+  <div aria-hidden="true" style={{
+    width: 52, height: 52, borderRadius: 14,
+    background: `${color}18`, border: `1px solid ${color}35`,
+    boxShadow: `0 0 14px ${color}20`,
+    display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
+  }}>
+    <Icon size={22} color={color} strokeWidth={1.75} />
+  </div>
+)
 
 export default function Home() {
   const [oA, setOA] = useState(null);
