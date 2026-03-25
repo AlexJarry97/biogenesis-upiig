@@ -365,16 +365,36 @@ export default function Home() {
           </div>
           <div className="space-y-3">
             {[
-              { n:"01", t:"Llena el formulario", d:"Regístrate con tus datos y preferencias.", c:"#f59e0b" },
-              { n:"02", t:"Te agregamos al grupo", d:"WhatsApp según tu participación.", c:"#8b5cf6" },
-              { n:"03", t:"Transferencia grupal", d:"$1,340 × persona. Te pasamos datos bancarios.", c:"#10b981" },
-              { n:"04", t:"Recibe tu código-cupón", d:"Registro en luma.com/congresobiogenesis.", c:"#f59e0b" },
-              { n:"05", t:"¡Guadalajara!", d:"Llega el 6 de mayo. 3 días de innovación.", c:"#ec4899" },
+              { n:"01", t:"Llena el formulario",   d:"Regístrate con tus datos y preferencias.",         c:"#f59e0b" },
+              { n:"02", t:"Te agregamos al grupo",  d:"WhatsApp según tu participación.",                  c:"#8b5cf6" },
+              { n:"03", t:"Transferencia grupal",   d:"$1,340 × persona. Te pasamos datos bancarios.",     c:"#10b981" },
+              { n:"04", t:"Recibe tu código-cupón", d:"Registro en luma.com/congresobiogenesis.",          c:"#f59e0b" },
+              { n:"05", t:"¡Guadalajara!",          d:"Llega el 6 de mayo. 3 días de innovación.",         c:"#ec4899" },
             ].map((s, i) => (
-              <div key={i} className="bg-slate-50 rounded-3xl p-5 flex items-start gap-5 border border-slate-100 hover:bg-amber-50/30 transition-all">
-                <div className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 font-mono font-bold text-lg" style={{ background:`${s.c}15`, color:s.c, border:`1px solid ${s.c}30` }}>{s.n}</div>
-                <div><div className="font-extrabold text-slate-800">{s.t}</div><div className="text-slate-500 text-sm mt-1">{s.d}</div></div>
-              </div>
+              <Fragment key={i}>
+                <div className="bg-slate-50 rounded-3xl p-5 flex items-start gap-5 border border-slate-100 hover:bg-amber-50/30 transition-all">
+                  <div className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 font-mono font-bold text-lg"
+                    style={{ background:`${s.c}15`, color:s.c, border:`1px solid ${s.c}30` }}>{s.n}
+                  </div>
+                  <div>
+                    <div className="font-extrabold text-slate-800">{s.t}</div>
+                    <div className="flex items-center gap-1 text-slate-500 text-sm mt-1">
+                      {s.d}
+                      {i < 4
+                        ? <ArrowRight size={14} color="#f59e0b" className="flex-shrink-0 ml-1" />
+                        : <PartyPopper size={14} color="#ec4899" className="flex-shrink-0 ml-1" />
+                      }
+                    </div>
+                  </div>
+                </div>
+                {i < 4 && (
+                  <div className="flex gap-5 px-5">
+                    <div className="w-12 flex justify-center">
+                      <div className="w-0.5 h-3 bg-slate-200 rounded" />
+                    </div>
+                  </div>
+                )}
+              </Fragment>
             ))}
           </div>
         </div>
