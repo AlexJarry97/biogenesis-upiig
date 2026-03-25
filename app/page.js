@@ -51,10 +51,10 @@ export default function Home() {
             <div className="w-9 h-9 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-lg">🧬</div>
             <div>
               <div className="font-extrabold text-sm tracking-tight text-slate-800">UIL UPIIG <span className="text-amber-500">×</span> Biogénesis</div>
-              <div className="text-slate-400" style={{ fontSize: 8, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2 }}>De los papers a la realidad</div>
+              <div className="text-slate-400" style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 2 }}>De los papers a la realidad</div>
             </div>
           </div>
-          <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer" className="bg-amber-400 hover:bg-amber-500 text-slate-900 px-5 py-2 rounded-2xl font-extrabold text-xs uppercase tracking-wide transition-all hover:scale-105">Registrarme</a>
+          <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer" className="bg-amber-400 hover:bg-amber-500 active:scale-95 text-slate-900 px-5 py-2 rounded-2xl font-extrabold text-xs uppercase tracking-wide transition-all hover:scale-105">Registrarme</a>
         </div>
       </nav>
 
@@ -75,7 +75,7 @@ export default function Home() {
             <div className="flex items-center gap-2">📍 <span className="font-bold">UVM Guadalajara Sur</span></div>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-            <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-amber-400 text-slate-900 px-8 py-4 rounded-2xl font-extrabold text-base uppercase tracking-wide hover:bg-amber-300 transition-all hover:scale-105" style={{ boxShadow: "0 0 30px rgba(251,191,36,0.3)" }}>Quiero ir — Registrarme →</a>
+            <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-amber-400 text-slate-900 px-8 py-4 rounded-2xl font-extrabold text-base uppercase tracking-wide hover:bg-amber-300 active:scale-95 transition-all hover:scale-105" style={{ boxShadow: "0 0 30px rgba(251,191,36,0.3)" }}>Quiero ir — Registrarme →</a>
             <a href="#info" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-slate-400 border border-slate-600 px-8 py-4 rounded-2xl font-bold text-sm hover:text-white hover:border-slate-400 transition-all">Primero quiero saber más ↓</a>
           </div>
           <div className="inline-flex items-center gap-3">
@@ -166,8 +166,8 @@ export default function Home() {
                   <span className="font-extrabold text-amber-600 text-sm">{s.i}</span>
                 </div>
                 <div className="font-extrabold text-xs text-slate-800 mb-1">{s.name}</div>
-                <div className="text-slate-400" style={{ fontSize: 10 }}>{s.role}</div>
-                <span className="inline-block bg-slate-100 rounded-full px-3 py-0.5 mt-2" style={{ fontSize: 9, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, color: "#64748b" }}>{s.tag}</span>
+                <div className="text-slate-400" style={{ fontSize: 11 }}>{s.role}</div>
+                <span className="inline-block bg-slate-100 rounded-full px-3 py-0.5 mt-2" style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, color: "#64748b" }}>{s.tag}</span>
               </div>
             ))}
           </div>
@@ -246,12 +246,12 @@ export default function Home() {
             {sT && (
               <div className="px-5 pb-5">
                 <p className="text-sm text-slate-500 mb-3">~3 horas. Precios de referencia (ida):</p>
-                <div className="grid grid-cols-3 gap-3 mb-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
                   {[{l:"ETN",p:"~$325",n:"Anticipada"},{l:"Futura",p:"~$315",n:"Económico"},{l:"Primera Plus",p:"~$620",n:"Primera clase"}].map((t,i)=>(
                     <div key={i} className="bg-white rounded-2xl p-4 text-center border border-slate-100">
                       <div className="font-extrabold text-sm text-slate-800">{t.l}</div>
                       <div className="font-mono font-bold text-amber-600 text-lg">{t.p}</div>
-                      <div className="text-slate-400" style={{fontSize:10}}>{t.n}</div>
+                      <div className="text-slate-400 text-xs">{t.n}</div>
                     </div>
                   ))}
                 </div>
@@ -339,7 +339,7 @@ export default function Home() {
             <div className="text-5xl mb-4">🧬</div>
             <h2 className="font-extrabold text-3xl text-white mb-3 tracking-tight">¿Te apuntas?</h2>
             <p className="text-slate-400 mb-8 max-w-md mx-auto">Llena el formulario, te agregamos al grupo de WhatsApp y arrancamos la gestión.</p>
-            <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-amber-400 text-slate-900 px-10 py-5 rounded-2xl font-extrabold text-base uppercase tracking-wide hover:bg-amber-300 transition-all hover:scale-105" style={{ boxShadow: "0 0 40px rgba(251,191,36,0.3)" }}>Registrarme ahora →</a>
+            <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-amber-400 text-slate-900 px-10 py-5 rounded-2xl font-extrabold text-base uppercase tracking-wide hover:bg-amber-300 active:scale-95 transition-all hover:scale-105" style={{ boxShadow: "0 0 40px rgba(251,191,36,0.3)" }}>Registrarme ahora →</a>
             <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-slate-500">
               <a href={WHATSAPP_CONTACT} target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">📱 WhatsApp con Alejandro</a>
               <span className="hidden sm:inline">·</span>
