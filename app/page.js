@@ -117,19 +117,19 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-  { icon: Mic,       color: "#f59e0b", t: "Conferencias y paneles", d: "Speakers internacionales" },
-  { icon: Coffee,    color: "#10b981", t: "Coffee break diario",    d: "Networking informal" },
-  { icon: FileText,  color: "#8b5cf6", t: "Constancia UVM",         d: "Con aval institucional" },
-  { icon: Rocket,    color: "#fbbf24", t: "Startup Showcase",       d: "Pitch ante inversores" },
-  { icon: ImageIcon, color: "#ec4899", t: "Concurso de carteles",   d: "Publica en CIBIOS-BUAP" },
-  { icon: Users,     color: "#0ea5e9", t: "Networking",             d: "+350 asistentes biotech" },
-].map((x, i) => (
-  <div key={i} className="bg-white shadow-sm hover:bg-amber-50 border border-slate-100 hover:border-amber-200 rounded-3xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-    <div className="mb-3"><IconBox icon={x.icon} color={x.color} /></div>
-    <div className="font-extrabold text-sm text-slate-800 mb-1">{x.t}</div>
-    <div className="text-xs text-slate-500">{x.d}</div>
-  </div>
-))}
+              { icon: Mic,       color: "#f59e0b", t: "Conferencias y paneles", d: "Speakers internacionales" },
+              { icon: Coffee,    color: "#10b981", t: "Coffee break diario",    d: "Networking informal" },
+              { icon: FileText,  color: "#8b5cf6", t: "Constancia UVM",         d: "Con aval institucional" },
+              { icon: Rocket,    color: "#fbbf24", t: "Startup Showcase",       d: "Pitch ante inversores" },
+              { icon: ImageIcon, color: "#ec4899", t: "Concurso de carteles",   d: "Publica en CIBIOS-BUAP" },
+              { icon: Users,     color: "#0ea5e9", t: "Networking",             d: "+350 asistentes biotech" },
+            ].map((x, i) => (
+              <div key={i} className="bg-white shadow-sm hover:bg-amber-50 border border-slate-100 hover:border-amber-200 rounded-3xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <div className="mb-3"><IconBox icon={x.icon} color={x.color} /></div>
+                <div className="font-extrabold text-sm text-slate-800 mb-1">{x.t}</div>
+                <div className="text-xs text-slate-500">{x.d}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
