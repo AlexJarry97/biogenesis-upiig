@@ -108,6 +108,8 @@ export default function Home() {
         </div>
       </section>
 
+      <div style={{ height: 2, background: "linear-gradient(90deg, transparent, #fbbf2440, transparent)" }} />
+
       {/* QUÉ INCLUYE */}
       <section id="info" className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
@@ -133,6 +135,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div style={{ height: 1, background: "linear-gradient(90deg, transparent, #e2e8f0, transparent)" }} />
 
       {/* QUÉ NO INCLUYE */}
       <section className="py-16 px-4 bg-rose-50 border-y border-rose-100">
@@ -213,6 +217,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div style={{ height: 1, background: "linear-gradient(90deg, transparent, #e2e8f0, transparent)" }} />
 
       {/* COSTOS */}
       <section className="py-20 px-4 bg-white">
@@ -347,6 +353,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div style={{ height: 1, background: "linear-gradient(90deg, transparent, #e2e8f0, transparent)" }} />
 
       {/* PASOS */}
       <section className="py-20 px-4 bg-white">
