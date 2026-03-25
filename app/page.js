@@ -1,6 +1,6 @@
 'use client';
 import { useState, Fragment } from 'react';
-import { Mic, Coffee, FileText, Rocket, Image, Users, BedDouble, Bus, Utensils, House, Lightbulb, AlertTriangle, ArrowRight, PartyPopper } from 'lucide-react';
+import { Mic, Coffee, FileText, Rocket, Image as ImageIcon, Users, BedDouble, Bus, Utensils, House, Lightbulb, AlertTriangle, ArrowRight, PartyPopper } from 'lucide-react';
 
 const GOOGLE_FORM_URL = "https://forms.gle/YRHR914L2pVnuNyq9";
 const WHATSAPP_CONTACT = "https://wa.me/5214772688815";
@@ -45,7 +45,7 @@ const TAG_COLORS = {
   "Bioplásticos":  "#14b8a6",
   "DeepTech":      "#6366f1",
   "Innovación":    "#f97316"
-}
+};
 
 const IconBox = ({ icon: Icon, color }) => (
   <div aria-hidden="true" style={{
@@ -56,7 +56,7 @@ const IconBox = ({ icon: Icon, color }) => (
   }}>
     <Icon size={22} color={color} strokeWidth={1.75} />
   </div>
-)
+);
 
 export default function Home() {
   const [oA, setOA] = useState(null);
