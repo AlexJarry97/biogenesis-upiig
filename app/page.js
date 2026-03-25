@@ -193,16 +193,23 @@ export default function Home() {
             <h2 className="font-extrabold text-3xl text-slate-800 mt-3 tracking-tight">Quién estará ahí</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {SPEAKERS.map((s, idx) => (
-              <div key={idx} className="bg-white hover:bg-amber-50 rounded-3xl p-5 border border-slate-100 hover:border-amber-200 transition-all duration-300 text-center hover:-translate-y-1">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-100 to-violet-50 border border-slate-200 flex items-center justify-center mx-auto mb-3">
-                  <span className="font-extrabold text-amber-600 text-sm">{s.i}</span>
+            {SPEAKERS.map((s, idx) => {
+              const c = TAG_COLORS[s.tag] || "#94a3b8";
+              return (
+                <div key={idx} className="bg-white hover:bg-amber-50 rounded-3xl p-5 border border-slate-100 hover:border-amber-200 transition-all duration-300 text-center hover:-translate-y-1 hover:shadow-lg">
+                  <div className="w-16 h-16 rounded-full mx-auto mb-2 flex items-center justify-center font-extrabold text-white text-base"
+                    style={{ background: `linear-gradient(135deg, ${c}cc, ${c})` }}>
+                    {s.i}
+                  </div>
+                  <span className="inline-block rounded-full px-2 py-0.5 mb-2 text-xs font-bold"
+                    style={{ background: `${c}18`, color: c }}>
+                    {s.tag}
+                  </span>
+                  <div className="font-extrabold text-sm text-slate-800 leading-tight mb-1">{s.name}</div>
+                  <div className="text-slate-400 text-xs leading-snug">{s.role}</div>
                 </div>
-                <div className="font-extrabold text-xs text-slate-800 mb-1">{s.name}</div>
-                <div className="text-slate-400" style={{ fontSize: 11 }}>{s.role}</div>
-                <span className="inline-block bg-slate-100 rounded-full px-3 py-0.5 mt-2" style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, color: "#64748b" }}>{s.tag}</span>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
