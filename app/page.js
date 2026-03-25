@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 
-const GOOGLE_FORM_URL = "https://forms.gle/TU_FORM_ID_AQUI";
+const GOOGLE_FORM_URL = "https://forms.gle/YRHR914L2pVnuNyq9";
 const WHATSAPP_CONTACT = "https://wa.me/5214772688815";
 const AIRBNB_LINK = "https://www.airbnb.mx/rooms/1524047220719488575?adults=16&check_in=2026-05-06&check_out=2026-05-09";
 
