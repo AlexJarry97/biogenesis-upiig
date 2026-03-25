@@ -81,7 +81,7 @@ export default function Home() {
       </nav>
 
       {/* HERO */}
-      <section className="relative overflow-hidden pt-24 pb-20 px-4" style={{ background: "linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #1e293b 100%)" }}>
+      <section className="relative overflow-hidden pt-24 pb-20 px-4" style={{ background: "radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #1e293b 100%)", backgroundSize: "24px 24px, cover" }}>
         <div className="absolute top-20 left-1/4 w-96 h-96 rounded-full opacity-20 blur-3xl" style={{ background: "radial-gradient(circle, #fbbf24, transparent)" }} />
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-amber-400/15 border border-amber-400/30 rounded-full px-5 py-2 mb-8">
